@@ -1,12 +1,12 @@
 package com.learn.view
 
-import com.learn.app.Styles
+import com.learn.css.MyStyle
 import tornadofx.*
 
-class MainView : View("TornadoFX") {
+class MainView : View("Css") {
     override val root = hbox {
-        label(title) {
-            addClass(Styles.heading)
-        }
+        addClass(MyStyle.vbox)
+        label("Css")
+        label("Css")
     }
 }
