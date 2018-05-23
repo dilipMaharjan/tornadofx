@@ -1,5 +1,6 @@
 package com.learn.controller
 
+import javafx.collections.FXCollections
 import tornadofx.*
 
 
@@ -10,4 +11,6 @@ class MyController : Controller() {
     fun writeToDb(inputValue: String) {
         println(inputValue)
     }
+
+    val values = FXCollections.observableArrayList("Alpha", "Beta", "Gamma", "Delta")
 }

@@ -18,9 +18,14 @@ class MainView : View("TornadoFX") {
         val inputField = textfield()
         button("Ok") {
             action {
-                myController.writeToDb(inputField.text)
+                val txt = inputField.text
+                myController.writeToDb(txt)
+                myController.values.add(txt)
                 inputField.clear()
             }
         }
+
+        label("List Items")
+        listview(myController.values)
     }
 }
