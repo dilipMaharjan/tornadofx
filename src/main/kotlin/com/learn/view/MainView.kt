@@ -18,7 +18,7 @@ class MainView : View("TornadoFX") {
         }
         button("Another View") {
             action {
-                replaceWith(AnotherView::class)
+                replaceWith(AnotherView::class, ViewTransition.Slide(0.3.seconds, ViewTransition.Direction.RIGHT))
             }
         }
     }
