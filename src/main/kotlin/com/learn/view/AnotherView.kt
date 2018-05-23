@@ -14,4 +14,14 @@ class AnotherView : View("Another View") {
             }
         }
     }
+
+    override fun onDock() {
+        super.onDock()
+        println("Docking")
+    }
+
+    override fun onUndock() {
+        super.onUndock()
+        println("UnDocking")
+    }
 }
