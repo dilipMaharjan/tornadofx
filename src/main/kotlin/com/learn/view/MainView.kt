@@ -28,7 +28,7 @@ class MainView : View("Person Editor") {
                 form {
                     fieldset("Edit person") {
                         field("Name") {
-                            textfield(model.name)
+                            textfield(model.name).validator { if (it.isNullOrBlank()) error("The name field is required.") else null }
                         }
                         field("Title") {
                             textfield(model.title)
